@@ -2,8 +2,9 @@ import React from 'react'
 
 const Attribute = ({ name }) => (
     <div className="attribute-container">
-        <input />
         <label>{name}</label>
+        <span className="attribute-modifier">3</span>
+        <input type="number" max="99" />
     </div>
 )
 

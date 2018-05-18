@@ -6,7 +6,7 @@ import Attribute from '../components/Attribute'
 // modifier
 
 const AddAttributes = () => (
-    <div>
+    <div className="attributes-container">
         <form onSubmit={e => { e.preventDefault() }}>
             <Attribute name="Strength" />
             <Attribute name="Dexterity" />
