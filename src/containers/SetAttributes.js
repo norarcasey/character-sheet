@@ -1,11 +1,9 @@
 import React from 'react'
 import Attribute from '../components/Attribute'
 
-// title
-// value
-// modifier
-
-const AddAttributes = () => (
+const SetAttributes = () => {
+ 
+ return (
     <div className="attributes-container">
         <form onSubmit={e => { e.preventDefault() }}>
             <Attribute name="Strength" />
@@ -13,6 +11,8 @@ const AddAttributes = () => (
             <Attribute name="Constitution" />
         </form>
     </div>
-)
+    )
+}
 
-export default AddAttributes
+
+export default SetAttributes

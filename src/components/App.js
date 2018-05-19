@@ -1,10 +1,10 @@
 import React from 'react'
-import AddAttributes from '../containers/AddAttributes'
+import SetAttributes from '../containers/SetAttributes'
 
 const App = () => (
   <div>
     <h1>Rodney 'lil Rod'</h1>
-    <AddAttributes />
+    <SetAttributes />
   </div>
 )
 
