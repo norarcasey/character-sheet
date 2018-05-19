@@ -1,7 +1,9 @@
 import React from 'react'
 import Attribute from '../components/Attribute'
+import { connect } from 'react-redux'
+import { saveState } from '../actions'
 
-const SetAttributes = () => {
+const SetAttributes = ({dispatch}) => {
  
  return (
     <div className="attributes-container">
@@ -9,10 +11,11 @@ const SetAttributes = () => {
             <Attribute name="Strength" />
             <Attribute name="Dexterity" />
             <Attribute name="Constitution" />
+            <button onClick={(e) =>  dispatch(saveState())}>Save State</button>
         </form>
     </div>
     )
 }
 
 
-export default SetAttributes
+export default connect()(SetAttributes)
