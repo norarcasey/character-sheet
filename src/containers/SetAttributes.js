@@ -1,9 +1,8 @@
 import React from 'react'
 import Attribute from '../components/Attribute'
-import { connect } from 'react-redux'
-import { saveState } from '../actions'
+import { saveStateToFirebase }  from '../database/firebase'
 
-const SetAttributes = ({dispatch}) => {
+const SetAttributes = () => {
  
  return (
     <div className="attributes-container">
@@ -11,11 +10,10 @@ const SetAttributes = ({dispatch}) => {
             <Attribute name="Strength" />
             <Attribute name="Dexterity" />
             <Attribute name="Constitution" />
-            <button onClick={(e) =>  dispatch(saveState())}>Save State</button>
+            <button onClick={(e) =>  saveStateToFirebase()}>Save State</button>
         </form>
     </div>
     )
 }
 
-
-export default connect()(SetAttributes)
+export default SetAttributes

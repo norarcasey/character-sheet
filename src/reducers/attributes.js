@@ -1,5 +1,3 @@
-import {saveStateToFirebase}  from '../database/firebase'
-
 const attributes = (state = [], action) => {
   switch (action.type) {
     case 'SET_ATTRIBUTE':
@@ -21,10 +19,6 @@ const attributes = (state = [], action) => {
       }
 
       return results
-    
-    case 'SAVE_STATE':
-      saveStateToFirebase(state)
-      return state
 
     default:
       return state

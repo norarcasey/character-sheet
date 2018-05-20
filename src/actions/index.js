@@ -3,7 +3,3 @@ export const setAttribute = (text,value) => ({
   text,
   value
 })
-
-export const saveState = () => ({
-  type: 'SAVE_STATE'
-})

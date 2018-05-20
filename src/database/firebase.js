@@ -1,17 +1,16 @@
 import firebase from 'firebase'
 import uuid from 'uuid/v4'
 import { FirebaseConfig } from "../config/keys";
+import store from '../store'
 
 firebase.initializeApp(FirebaseConfig);
 const database = firebase.database()
 
-export const saveStateToFirebase = (state) => {
+export const saveStateToFirebase = () => {
   const id = uuid()
-  console.log(id)
-  console.log(state)
-  database.ref(`/${id}`).set({
-    state, id
-  })
+  const state = store.getState()
+  console.log(id, state)
+  database.ref(`/${id}`).set({ state, id })
 }
 
 export default database
