@@ -1,5 +1,5 @@
-export const setAttribute = (text,value) => ({
+export const setAttribute = (text, score) => ({
   type: 'SET_ATTRIBUTE',
   text,
-  value
+  score
 })

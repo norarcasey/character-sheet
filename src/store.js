@@ -1,6 +1,4 @@
-import React from 'react'
 import { createStore } from 'redux'
-import App from './components/App'
 import rootReducer from './reducers'
 
 /* eslint-disable no-underscore-dangle */
