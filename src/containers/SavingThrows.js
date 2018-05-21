@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import SavingThrow from '../components/SavingThrow'
 import { modifierHelper } from '../helpers/modifierHelper'
 
-const SavingThrows = ({ attributes }) => {
+const SavingThrows = ({ attributes, proficiencyBonus }) => {
 
   return (
     <div className="saving-throws">
@@ -11,7 +11,14 @@ const SavingThrows = ({ attributes }) => {
       {
         attributes.map( (attr, index) => {
           let modifier = modifierHelper(attr.score)
-          return (<SavingThrow key={index} attribute={attr} modifier={modifier} />)
+          return (
+            <SavingThrow
+              key={index}
+              attribute={attr}
+              modifier={modifier}
+              proficiencyBonus={proficiencyBonus}
+            />
+          )
         })
       }
     </div>
@@ -19,7 +26,8 @@ const SavingThrows = ({ attributes }) => {
 }
 
 const mapStateToProps = state => ({
-  attributes: state.attributes
+  attributes: state.attributes,
+  proficiencyBonus: state.proficiencyBonus
 })
 
 export default connect(mapStateToProps)(SavingThrows)

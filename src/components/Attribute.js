@@ -10,7 +10,6 @@ class Attribute extends Component {
     super(props)
 
     this.state = {
-      props: props,
       modifier: 0
     }
 
@@ -22,16 +21,15 @@ class Attribute extends Component {
   }
 
   render() {
-    let props = this.state.props
 
     return (
       <div className="attribute-container">
-        <label>{props.name}</label>
+        <label>{this.props.name}</label>
           <span className="attribute-modifier">{this.state.modifier}</span>
         <input
           type="number"
           onChange={ (e) => {
-              props.dispatch(setAttribute(props.name, e.target.value))
+              this.props.dispatch(setAttribute(this.props.name, e.target.value))
               this.updateModifier(e.target.value)
             }
           }

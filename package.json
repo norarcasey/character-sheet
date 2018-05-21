@@ -14,7 +14,7 @@
     "redux": "^3.5.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "react-scripts test"
