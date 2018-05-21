@@ -5,8 +5,10 @@ import SavingThrows from '../containers/SavingThrows'
 const App = () => (
   <div>
     <h1>Rodney 'lil Rod'</h1>
-    <SetAttributes />
-    <SavingThrows />
+    <div className="character-sheet">
+      <SetAttributes />
+      <SavingThrows />
+    </div>
   </div>
 )
 

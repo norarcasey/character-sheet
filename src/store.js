@@ -7,7 +7,7 @@ const store = createStore(
   { attributes: [
     {text: "Strength", score: 0},
     {text: "Dexterity", score: 0},
-    {text: "Consitution", score: 0},
+    {text: "Constitution", score: 0},
     {text: "Intelligence", score: 0},
     {text: "Wisdom", score: 0},
     {text: "Charisma", score: 0}
