@@ -36,12 +36,18 @@ h2 {
   text-align: center;
 }
 
-.saving-throws {
+.saving-throws, .skills {
   margin: 0 50px;
 }
 
 .saving-throws .saving-throw input,
 .saving-throws .saving-throw label,
-.saving-throws .saving-throw span {
+.saving-throws .saving-throw span,
+
+.skills .skill input,
+.skills .skill label,
+.skills .skill span
+
+{
   margin-right: 10px;
 }

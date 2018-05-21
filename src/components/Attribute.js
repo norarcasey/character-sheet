@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { setAttribute } from '../actions'
 import { modifierHelper } from '../helpers/modifierHelper'
 
-
 class Attribute extends Component {
 
   constructor(props) {
