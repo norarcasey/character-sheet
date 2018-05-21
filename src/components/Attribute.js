@@ -37,7 +37,7 @@ class Attribute extends Component {
           }
         />
       </div>
-    );
+    )
   }
  }
 
