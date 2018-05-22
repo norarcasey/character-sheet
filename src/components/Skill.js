@@ -14,7 +14,7 @@ class Skill extends Component {
     }
 
     updateModifier(proficiencyBonus) {
-      this.setState({ proficiencyBonus: parseInt(proficiencyBonus) })
+      this.setState({ proficiencyBonus: parseInt(proficiencyBonus, 10) })
     }
 
     render() {

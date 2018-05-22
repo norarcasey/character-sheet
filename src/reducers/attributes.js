@@ -6,7 +6,7 @@ const attributes = (state = [], action) => {
       state.forEach(attr => {
 
         if (attr.text === action.text) {
-          results.push({ ...attr, score: parseInt(action.score) })
+          results.push({ ...attr, score: parseInt(action.score, 10) })
         } else {
           results.push(attr)
         }

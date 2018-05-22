@@ -11,7 +11,6 @@ const Skills = ({ attributes, skills, proficiencyBonus }) => {
       {
         skills.map( (skill, index) => {
           let attribute = attributes.filter(attr => attr.text === skill.type)[0]
-          console.log(attribute)
           let modifier = modifierHelper(attribute.score)
 
           return (
