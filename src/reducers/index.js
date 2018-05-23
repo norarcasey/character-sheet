@@ -3,6 +3,7 @@ import attributes from './attributes'
 import classes from './classes'
 import proficiencyBonus from './proficiencyBonus'
 import proficiencies from './proficiencies'
+import races from './races'
 import skills from './skills'
 
 export default combineReducers({
@@ -10,5 +11,6 @@ export default combineReducers({
   classes,
   proficiencyBonus,
   proficiencies,
+  races,
   skills
 })

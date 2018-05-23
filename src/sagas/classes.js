@@ -1,6 +1,6 @@
-import { call, put, takeEvery } from 'redux-saga/effects'
+import { call, put } from 'redux-saga/effects'
 
-function* fetchClasses(action) {
+export function* fetchClasses(action) {
    try {
       const response = yield call(fetch, 'http://www.dnd5eapi.co/api/classes')
       const data = yield call([response, 'json'])
@@ -11,9 +11,3 @@ function* fetchClasses(action) {
       yield put({type: "CLASSES_FETCH_FAILED", message: e.message});
    }
 }
-
-function* rootSaga() {
-  yield takeEvery("CLASSES_FETCH_REQUESTED", fetchClasses);
-}
-
-export default rootSaga;
