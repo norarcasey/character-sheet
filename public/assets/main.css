@@ -2,6 +2,10 @@ html, body {
   font-size: 16px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 h2 {
   margin: 0
 }
@@ -50,4 +54,24 @@ h2 {
 
 {
   margin-right: 10px;
+}
+
+
+
+.races {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: 2rem;
+}
+
+.races .race-select {
+  width: 30%;
+}
+
+.races p {
+  padding: 1rem;
+  padding-top: 0;
+  margin-top: 0;
+  width: 70%;
 }

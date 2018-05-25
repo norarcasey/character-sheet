@@ -6,6 +6,7 @@ export function* fetchRaces(action) {
       const data = yield call([response, 'json'])
 
       yield put({type: "RACES_FETCH_SUCCEEDED", races: data.results });
+      yield put({type: "RACE_FETCH_REQUESTED", id: 1})
    } catch (e) {
       console.log("Error", e)
       yield put({type: "RACES_FETCH_FAILED", message: e.message});

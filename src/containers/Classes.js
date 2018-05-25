@@ -14,7 +14,7 @@ class Classes extends Component {
         return (
             <div className="character-class">
                 <label htmlFor="class-select">Class</label>{' '}
-                <select name="class-select" id="class-select">
+                <select name="class-select" id="class-select" size={this.props.classes.length}>
                     {
                         this.props.classes.map((c, i) => {
                             return <option key={i}>{c.name}</option>
