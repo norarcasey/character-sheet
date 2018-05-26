@@ -1,0 +1,25 @@
+.attributes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.attribute-container {
+  border: solid 2px black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.attribute-container .attribute-modifier {
+  font-size: 2rem;
+}
+
+.attribute-container input {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  text-align: center;
+}

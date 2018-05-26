@@ -1,24 +1,19 @@
 html, body {
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 h2 {
-  margin: 0
-}
+  margin: 0; }
 
 .character-sheet {
-  display: flex;
-}
+  display: flex; }
 
 .attributes-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .attribute-container {
   border: solid 2px black;
@@ -27,51 +22,38 @@ h2 {
   flex-direction: column;
   max-width: 100px;
   margin-bottom: 10px;
-  text-align: center;
-}
+  text-align: center; }
 
 .attribute-container .attribute-modifier {
-  font-size: 2rem;
-}
+  font-size: 2rem; }
 
 .attribute-container input {
   font-size: 1.5rem;
   line-height: 1.7rem;
-  text-align: center;
-}
+  text-align: center; }
 
 .saving-throws, .skills {
-  margin: 0 50px;
-}
+  margin: 0 50px; }
 
 .saving-throws .saving-throw input,
 .saving-throws .saving-throw label,
 .saving-throws .saving-throw span,
-
 .skills .skill input,
 .skills .skill label,
-.skills .skill span
-
-{
-  margin-right: 10px;
-}
-
-
+.skills .skill span {
+  margin-right: 10px; }
 
 .races {
   display: flex;
   justify-content: space-between;
   width: 30%;
-  margin: 2rem;
-}
+  margin: 2rem; }
 
 .races .race-select {
-  width: 30%;
-}
+  width: 30%; }
 
 .races p {
   padding: 1rem;
   padding-top: 0;
   margin-top: 0;
-  width: 70%;
-}
+  width: 70%; }
