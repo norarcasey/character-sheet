@@ -6,18 +6,33 @@ class CharacterWizard extends Component {
 
     constructor(props) {
         super(props)
+
+        this.state = {
+          activeTab: 'class'
+        }
     }
 
     render() {
         return (
           <section className="character-wizard">
             <nav>
-              <a href="#">Class</a>
-              <a href="#" className="active">Race</a>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault
+                  this.setState({activeTab: 'class'})
+                }}
+                className={this.state.activeTab === 'class'? 'active' : ''}>Class</a>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault
+                  this.setState({activeTab: 'race'})
+                }}
+                className={this.state.activeTab === 'race'? 'active' : ''}>Race</a>
             </nav>
             <div className="character-wizard-details">
-              {/* <Classes /> */}
-              <Races />
+              {this.state.activeTab === 'class' ? <Classes /> : <Races />}
             </div>
           </section>
 

@@ -7,6 +7,7 @@ const attributes = [
   {text: "Charisma", score: 0}
 ]
 
+const RaceId = 1
 const ProficiencyBonus = 2
 const Proficiencies = [ "Perception", "Stealth", "Nature", "History"]
 
@@ -39,5 +40,6 @@ export const PreloadedState = {
   attributes: attributes,
   proficiencyBonus: ProficiencyBonus,
   proficiencies: Proficiencies,
+  raceId: RaceId,
   skills: Skills
 }

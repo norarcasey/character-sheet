@@ -1,4 +1,4 @@
-export default function counter(state = [], action) {
+export default function races(state = [], action) {
     switch (action.type) {
       case 'RACES_FETCH_SUCCEEDED':
         return action.races

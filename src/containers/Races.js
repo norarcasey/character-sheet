@@ -40,11 +40,12 @@ class Races extends Component {
                         }
 
                         this.selectRace(e.target.value)
+                        this.props.dispatch({ type: 'SET_RACE_ID', raceId: parseInt(raceId,10) })
                       }}>
                   {
                       races.map((race, i) => {
                           let index = i+1
-                          return <option key={index} value={index} selected={index === 1}>{race.name}</option>
+                          return <option key={index} value={index} selected={index === this.props.raceId}>{race.name}</option>
                       })
                   }
               </select>
@@ -55,7 +56,8 @@ class Races extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    races: state.races
+    races: state.races,
+    raceId: state.raceId
 })
 
 export default connect(mapStateToProps)(Races)
