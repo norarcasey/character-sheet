@@ -19,14 +19,14 @@ class CharacterWizard extends Component {
               <a
                 href="#"
                 onClick={(e) => {
-                  e.preventDefault
+                  e.preventDefault()
                   this.setState({activeTab: 'class'})
                 }}
                 className={this.state.activeTab === 'class'? 'active' : ''}>Class</a>
               <a
                 href="#"
                 onClick={(e) => {
-                  e.preventDefault
+                  e.preventDefault()
                   this.setState({activeTab: 'race'})
                 }}
                 className={this.state.activeTab === 'race'? 'active' : ''}>Race</a>

@@ -1,10 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import { concatPropNames } from '../helpers/detailHelper'
 
 class RaceDetails extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   render() {
 
@@ -14,13 +12,9 @@ class RaceDetails extends Component {
       <div className="details">
         <p><label>Size:</label>{details.size}</p>
         <p><label>Speed:</label>{details.speed}</p>
-        {/* <p><label>Languages:</label>{
-          d.languages.map((lang, index) => {
-              return <span>{lang.name} </span>
-            }
-          )}
-        </p> */}
+        { concatPropNames('Traits', details.traits) }
         <p><label>Languages:</label>{details.language_desc}</p>
+        { concatPropNames('Proficiences', details.starting_proficiencies) }
         <p><label>Age:</label>{details.age}</p>
         <p><label>Alignment:</label>{details.alignment}</p>
       </div>

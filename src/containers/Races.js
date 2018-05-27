@@ -7,7 +7,9 @@ class Races extends Component {
     constructor(props) {
         super(props)
 
-        props.dispatch({type: 'RACES_FETCH_REQUESTED'})
+        if(props.races.length === 0) {
+            props.dispatch({type: 'RACES_FETCH_REQUESTED'})
+        }
 
         this.state = {
           selectedRaceIndex: 0

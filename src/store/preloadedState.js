@@ -8,6 +8,7 @@ const attributes = [
 ]
 
 const RaceId = 1
+const ClassId = 1
 const ProficiencyBonus = 2
 const Proficiencies = [ "Perception", "Stealth", "Nature", "History"]
 
@@ -38,6 +39,7 @@ const Skills = [
 
 export const PreloadedState = {
   attributes: attributes,
+  classId: ClassId,
   proficiencyBonus: ProficiencyBonus,
   proficiencies: Proficiencies,
   raceId: RaceId,

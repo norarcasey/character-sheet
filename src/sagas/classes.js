@@ -6,8 +6,22 @@ export function* fetchClasses(action) {
       const data = yield call([response, 'json'])
 
       yield put({type: "CLASSES_FETCH_SUCCEEDED", classes: data.results });
+      yield put({type: "CLASS_FETCH_REQUESTED", id: 1})
    } catch (e) {
       console.log("Error", e)
       yield put({type: "CLASSES_FETCH_FAILED", message: e.message});
    }
+}
+
+
+export function* fetchClass(action) {
+  try {
+    const response = yield call(fetch, `http://www.dnd5eapi.co/api/classes/${action.id}`)
+    const data = yield call([response, 'json'])
+
+    yield put({type: "CLASS_FETCH_SUCCEEDED", class: data });
+  } catch (e) {
+      console.log("Error", e)
+      yield put({type: "CLASS_FETCH_FAILED", message: e.message});
+  }
 }
