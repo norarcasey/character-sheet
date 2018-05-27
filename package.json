@@ -33,6 +33,6 @@
     "build": "webpack --mode production",
     "eject": "react-scripts eject",
     "test": "react-scripts test",
-    "dev": "webpack — mode development"
+    "dev": "webpack --mode development --watch"
   }
 }

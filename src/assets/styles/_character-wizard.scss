@@ -1,0 +1,68 @@
+.character-wizard {
+  width: 100%;
+
+  nav {
+    background-color: teal;
+    width: 100%;
+
+    a {
+      color: #fff;
+      display: inline-block;
+      width: 50%;
+      text-align: center;
+      text-decoration: none;
+
+      padding: .5rem;
+
+      &:nth-child(odd) {
+        border-right: solid 1px #fff;
+      }
+
+      &.active {
+        background-color: $wizard-accent;
+      }
+    }
+  }
+
+  .character-wizard-details {
+    background-color: $wizard-accent;
+    padding: 1.3rem;
+
+    .classes, .races {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    select {
+      background-color: $wizard-accent;
+      border: none;
+      font-size: 1.2rem;
+      height: 100%;
+      overflow-y: auto;
+      padding-right: 1rem;
+      width: 40%;
+    }
+
+    .details {
+      color: $text-color;
+      font-size: .8rem;
+      margin-top: 0;
+      max-height: 300px;
+      min-height: 300px;
+      overflow-x: scroll;
+      width: 60%;
+
+      p {
+        margin-top: 0;
+      }
+
+      label {
+        font-weight: bold;
+        margin-right: 1rem;
+      }
+
+    }
+  }
+
+
+}

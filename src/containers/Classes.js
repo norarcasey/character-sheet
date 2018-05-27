@@ -13,7 +13,6 @@ class Classes extends Component {
     render() {
         return (
             <div className="character-class">
-                <label htmlFor="class-select">Class</label>{' '}
                 <select name="class-select" id="class-select" size={this.props.classes.length}>
                     {
                         this.props.classes.map((c, i) => {

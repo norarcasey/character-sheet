@@ -44,12 +44,17 @@ class Races extends Component {
                   }
               </select>
 
-              <p>
-                Name: { races.length > 0 ? selectedRace.name : "No Name"} <br />
-                Age: { races.length > 0 && selectedRace.details ? selectedRace.details.age : "no age"} <br />
-                Alignment: { races.length > 0 && selectedRace.details ? selectedRace.details.alignment : "no alignment"}
-              </p>
-
+              <div className="details">
+                <p>
+                  <label>Name:</label>{ races.length > 0 ? selectedRace.name : "No Name"}
+                </p>
+                <p>
+                  <label>Age:</label>{ races.length > 0 && selectedRace.details ? selectedRace.details.age : "no age"}
+                </p>
+                <p>
+                  <label>Alignment:</label>{ races.length > 0 && selectedRace.details ? selectedRace.details.alignment : "no alignment"}
+                </p>
+              </div>
             </div>
         )
     }
