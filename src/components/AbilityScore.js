@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { setAttribute } from '../actions'
+import { setAbilityScore } from '../actions'
 import { modifierHelper } from '../helpers/modifierHelper'
 
-class Attribute extends Component {
+class AbilityScore extends Component {
 
   constructor(props) {
     super(props)
 
     this.state = {
-      modifier: 0
+      modifier: -1
     }
 
     this.updateModifier = this.updateModifier.bind(this);
@@ -22,13 +22,14 @@ class Attribute extends Component {
   render() {
 
     return (
-      <div className="attribute-container">
+      <div className="ability-score">
         <label>{this.props.name}</label>
-          <span className="attribute-modifier">{this.state.modifier}</span>
+          <span className="ability-score-modifier">{this.state.modifier}</span>
         <input
           type="number"
+          defaultValue={this.props.score}
           onChange={ (e) => {
-              this.props.dispatch(setAttribute(this.props.name, e.target.value))
+              this.props.dispatch(setAbilityScore(this.props.name, e.target.value))
               this.updateModifier(e.target.value)
             }
           }
@@ -38,4 +39,4 @@ class Attribute extends Component {
   }
  }
 
-export default connect()(Attribute)
+export default connect()(AbilityScore)

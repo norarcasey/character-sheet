@@ -1,6 +1,6 @@
-export const setAttribute = (text, score) => ({
-  type: 'SET_ATTRIBUTE',
-  text,
+export const setAbilityScore = (name, score) => ({
+  type: 'SET_ABILITY_SCORE',
+  name,
   score
 })
 
@@ -17,8 +17,8 @@ export const addProficiency = (name) => ({
 })
 
 // Adds Saving Throw or Skill to the list of proficiencies
-export const addSkill = (name, attribute) => ({
+export const addSkill = (name, abilityScore) => ({
   type: 'ADD_SKILL',
   name,
-  attribute
+  abilityScore
 })

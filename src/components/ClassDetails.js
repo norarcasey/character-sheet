@@ -20,7 +20,7 @@ class ClassDetails extends Component {
 }
 
 const mapStateToProps = state => ({
-  attributes: state.attributes
+  abilityScores: state.abilityScores
 })
 
 export default connect(mapStateToProps)(ClassDetails)

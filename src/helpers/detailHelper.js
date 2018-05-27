@@ -5,3 +5,7 @@ export const concatPropNames = (name, propArray) => {
   let propNames = propArray.map((p) => p.name)
   return <p><label>{name}:</label>{propNames.join(', ')}</p>
 }
+
+export const concatAbilityBonus = (bonusArray, abilityScores) => {
+
+}

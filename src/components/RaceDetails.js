@@ -10,7 +10,7 @@ class RaceDetails extends Component {
 
     return (
       <div className="details">
-        {getAbilityBonus(details.ability_bonuses, this.props.attributes)}
+        {getAbilityBonus(details.ability_bonuses, this.props.abilityScores)}
         <p><label>Size:</label>{details.size}</p>
         <p><label>Speed:</label>{details.speed}</p>
         { concatPropNames('Traits', details.traits) }
@@ -23,17 +23,17 @@ class RaceDetails extends Component {
   }
 }
 
-const getAbilityBonus = (bonusArray, attributes) => {
+const getAbilityBonus = (bonusArray, abilityScores) => {
 
   let results = bonusArray.map((value, index) => {
-      return value > 0 ? `${attributes[index].text} +${value}` : false
+      return value > 0 ? `${abilityScores[index].name} +${value}` : false
   }).filter(value => value)
 
   return <p><label>Ability Bonuses:</label><span>{results.join(', ')}</span></p>
 }
 
 const mapStateToProps = state => ({
-  attributes: state.attributes
+  abilityScores: state.abilityScores
 })
 
 export default connect(mapStateToProps)(RaceDetails)

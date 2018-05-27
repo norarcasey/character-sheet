@@ -1,10 +1,10 @@
-const attributes = [
-  {text: "Strength", score: 0},
-  {text: "Dexterity", score: 0},
-  {text: "Constitution", score: 0},
-  {text: "Intelligence", score: 0},
-  {text: "Wisdom", score: 0},
-  {text: "Charisma", score: 0}
+const abilityScores = [
+  {name: "Strength", score: 8},
+  {name: "Dexterity", score: 8},
+  {name: "Constitution", score: 8},
+  {name: "Intelligence", score: 8},
+  {name: "Wisdom", score: 8},
+  {name: "Charisma", score: 8}
 ]
 
 const RaceId = 1
@@ -38,7 +38,7 @@ const Skills = [
 ]
 
 export const PreloadedState = {
-  attributes: attributes,
+  abilityScores: abilityScores,
   classId: ClassId,
   proficiencyBonus: ProficiencyBonus,
   proficiencies: Proficiencies,

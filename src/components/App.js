@@ -1,5 +1,5 @@
 import React from 'react'
-import SetAttributes from '../containers/SetAttributes'
+import AbilityScores from '../containers/AbilityScores'
 import SavingThrows from '../containers/SavingThrows'
 import Skills from '../containers/Skills'
 import CharacterWizard from '../containers/CharacterWizard'
@@ -9,7 +9,7 @@ const App = () => (
     <h1>Rodney 'lil Rod'</h1>
     <CharacterWizard />
     <div className="character-sheet">
-      <SetAttributes />
+      <AbilityScores />
       <div>
         <SavingThrows />
         <Skills />
