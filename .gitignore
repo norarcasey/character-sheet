@@ -1,2 +1,4 @@
 node_modules
 src/config/dev.js
+public/bundle.js
+public/style.css
