@@ -25,7 +25,7 @@ class Races extends Component {
     render() {
 
       let races = this.props.races
-      let selectedRace = races[this.state.selectedRaceIndex]
+      let selectedRace = races[this.props.raceId -1]
 
         return (
             <div className="races">

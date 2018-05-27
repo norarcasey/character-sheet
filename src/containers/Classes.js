@@ -24,7 +24,7 @@ class Classes extends Component {
 
     render() {
       let classes = this.props.classes
-      let selectedClass = classes[this.state.selectedClassIndex]
+      let selectedClass = classes[this.props.classId -1]
 
         return (
             <div className="classes">
