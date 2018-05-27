@@ -1,4 +1,7 @@
 .character-wizard {
+  background-color: $wizard-accent;
+  height: 370px;
+  margin-bottom: 1rem;
   width: 100%;
 
   nav {
@@ -25,7 +28,6 @@
   }
 
   .character-wizard-details {
-    background-color: $wizard-accent;
     padding: 1.3rem;
 
     .classes, .races {
@@ -48,7 +50,6 @@
       font-size: .8rem;
       margin-top: 0;
       max-height: 300px;
-      min-height: 300px;
       overflow-x: scroll;
       width: 60%;
 

@@ -1,17 +1,20 @@
 html, body {
+  background-color: $body-color;
   font-size: 16px;
   margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-h2 {
-  margin: 0
+h1, h2, h3 {
+  margin: 0;
+  color: $text-color;
 }
 
-a, p, select {
+a, p, span, label, select {
   color: $text-color;
 }
 
