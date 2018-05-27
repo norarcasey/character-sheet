@@ -9,7 +9,7 @@ class AbilityScore extends Component {
     super(props)
 
     this.state = {
-      modifier: -1
+      modifier:  modifierHelper(props.score)
     }
 
     this.updateModifier = this.updateModifier.bind(this);
