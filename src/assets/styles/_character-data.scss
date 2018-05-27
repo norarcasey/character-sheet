@@ -1,0 +1,21 @@
+.character-data {
+  input {
+    background: $body-color;
+    border: none;
+    display: inline-block;
+    font-size: 2rem;
+  }
+
+  .character-name {
+    padding-left: .5rem;
+    width: 80%;
+  }
+
+  .character-level {
+    padding-right: .5rem;
+    text-align: right;
+    width: 20%;
+  }
+
+}
+

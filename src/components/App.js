@@ -1,12 +1,17 @@
 import React from 'react'
 import AbilityScores from '../containers/AbilityScores'
+import CharacterLevel from '../components/CharacterLevel'
+import CharacterName from '../components/CharacterName'
 import SavingThrows from '../containers/SavingThrows'
 import Skills from '../containers/Skills'
 import CharacterWizard from '../containers/CharacterWizard'
 
 const App = () => (
   <div>
-    <h1>Rodney 'lil Rod'</h1>
+    <div className="character-data">
+      <CharacterName />
+      <CharacterLevel />
+    </div>
     <CharacterWizard />
     <div className="character-sheet">
       <AbilityScores />
