@@ -10,7 +10,12 @@ const AbilityScores = ( {abilityScores} ) => {
         <form onSubmit={e => { e.preventDefault() }}>
           {
             abilityScores.map((ability, key) => {
-                return <AbilityScore key={key} name={ability.name} score={ability.score} />
+                return <AbilityScore
+                          key={key}
+                          name={ability.name}
+                          full_name={ability.full_name}
+                          score={ability.score}
+                        />
             })
           }
 

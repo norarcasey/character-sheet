@@ -23,8 +23,8 @@ class AbilityScore extends Component {
 
     return (
       <div className="ability-score">
-        <label>{this.props.name}</label>
-          <span className="ability-score-modifier">{this.state.modifier}</span>
+        <label>{this.props.full_name}</label>
+        <span className="ability-score-modifier">{this.state.modifier}</span>
         <input
           type="number"
           defaultValue={this.props.score}

@@ -1,10 +1,10 @@
 const abilityScores = [
-  {name: "Strength", score: 8},
-  {name: "Dexterity", score: 8},
-  {name: "Constitution", score: 8},
-  {name: "Intelligence", score: 8},
-  {name: "Wisdom", score: 8},
-  {name: "Charisma", score: 8}
+  {full_name: "Strength", name: 'STR', score: 8},
+  {full_name: "Dexterity", name: 'DEX', score: 8},
+  {full_name: "Constitution", name: 'CON', score: 8},
+  {full_name: "Intelligence", name: 'INT', score: 8},
+  {full_name: "Wisdom", name: 'WIS', score: 8},
+  {full_name: "Charisma", name: 'CHA', score: 8}
 ]
 
 const RaceId = 1
@@ -12,28 +12,28 @@ const ClassId = 1
 const ProficiencyBonus = 2
 
 const Skills = [
-  { name: "Athletics", type: "Strength" },
+  { name: "Athletics", type: "STR" },
 
-  { name: "Acrobatics", type: "Dexterity" },
-  { name: "Slieght of Hand", type: "Dexterity" },
-  { name: "Stealth", type: "Dexterity" },
+  { name: "Acrobatics", type: "DEX" },
+  { name: "Slieght of Hand", type: "DEX" },
+  { name: "Stealth", type: "DEX" },
 
-  { name: "Arcana", type: "Intelligence" },
-  { name: "History", type: "Intelligence" },
-  { name: "Investigation", type: "Intelligence" },
-  { name: "Nature", type: "Intelligence" },
-  { name: "Religion", type: "Intelligence" },
+  { name: "Arcana", type: "INT" },
+  { name: "History", type: "INT" },
+  { name: "Investigation", type: "INT" },
+  { name: "Nature", type: "INT" },
+  { name: "Religion", type: "INT" },
 
-  { name: "Animal Handling", type: "Wisdom" },
-  { name: "Insight", type: "Wisdom" },
-  { name: "Medicine", type: "Wisdom" },
-  { name: "Perception", type: "Wisdom" },
-  { name: "Survival", type: "Wisdom" },
+  { name: "Animal Handling", type: "WIS" },
+  { name: "Insight", type: "WIS" },
+  { name: "Medicine", type: "WIS" },
+  { name: "Perception", type: "WIS" },
+  { name: "Survival", type: "WIS" },
 
-  { name: "Deception", type: "Charisma" },
-  { name: "Intimidation", type: "Charisma" },
-  { name: "Performance", type: "Charisma" },
-  { name: "Persuasion", type: "Charisma" },
+  { name: "Deception", type: "CHA" },
+  { name: "Intimidation", type: "CHA" },
+  { name: "Performance", type: "CHA" },
+  { name: "Persuasion", type: "CHA" },
 ]
 
 export const PreloadedState = {
