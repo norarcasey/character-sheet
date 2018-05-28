@@ -10,7 +10,6 @@ const abilityScores = [
 const RaceId = 1
 const ClassId = 1
 const ProficiencyBonus = 2
-const Proficiencies = [ "Perception", "Stealth", "Nature", "History"]
 
 const Skills = [
   { name: "Athletics", type: "Strength" },
@@ -41,7 +40,6 @@ export const PreloadedState = {
   abilityScores: abilityScores,
   classId: ClassId,
   proficiencyBonus: ProficiencyBonus,
-  proficiencies: Proficiencies,
   raceId: RaceId,
   skills: Skills
 }

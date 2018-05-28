@@ -11,12 +11,6 @@ export const setProficiency = (value) => ({
 })
 
 // Adds Saving Throw or Skill to the list of proficiencies
-export const addProficiency = (name) => ({
-  type: 'ADD_PROFICIENCY',
-  name
-})
-
-// Adds Saving Throw or Skill to the list of proficiencies
 export const setSkill = (name, isProficient=false) => ({
   type: 'SET_SKILL',
   name,
