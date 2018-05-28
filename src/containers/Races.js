@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import RaceDetails from '../components/RaceDetails'
+import ListItem from '../components/ListItem'
 
 class Races extends Component {
 
@@ -29,7 +30,23 @@ class Races extends Component {
 
         return (
             <div className="races">
-              <select
+              <ul>
+                { races.map((race, index) => {
+                    let raceId = index + 1
+
+                    return <ListItem
+                              key={raceId}
+                              index={index}
+                              name={race.name}
+                              list={races}
+                              className={raceId === this.props.raceId ? 'selected' : ''}
+                              fetchDispatch={{ type: 'RACE_FETCH_REQUESTED', id: raceId}}
+                              setDispatch={{ type: 'SET_RACE_ID', raceId: parseInt(raceId,10) }}
+                              selectItem={() => { this.selectRace(index)}}
+                            />
+                })}
+              </ul>
+              {/* <select
                   name="race-select"
                   id="race-select"
                   className="race-select"
@@ -50,7 +67,7 @@ class Races extends Component {
                           return <option key={index} value={index} selected={index === this.props.raceId}>{race.name}</option>
                       })
                   }
-              </select>
+              </select> */}
               {races.length > 0 && selectedRace.details ? (<RaceDetails details={selectedRace.details} />) : ""}
             </div>
         )
