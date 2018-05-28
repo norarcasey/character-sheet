@@ -19,7 +19,7 @@ class Classes extends Component {
     }
 
     selectClass(index) {
-      this.setState({ selectedClassIndex: parseInt(index, 10) -1 })
+      this.setState({ selectedClassIndex: parseInt(index, 10) })
     }
 
     render() {
@@ -28,28 +28,24 @@ class Classes extends Component {
 
         return (
             <div className="classes">
-                <select
-                  name="class-select"
-                  id="class-select"
-                  size={this.props.classes.length}
-                  onChange={ (e) => {
-                    let classId = e.target.value
+              <ul>
+                { classes.map((c, index) => {
+                    let classId = index + 1
+                    return <li
+                              key={classId}
+                              className={classId === this.props.classId ? 'selected' : ''}
+                              onClick={() => {
 
-                    if(!classes[classId - 1].details) {
-                      this.props.dispatch({ type: 'CLASS_FETCH_REQUESTED', id: classId})
-                    }
+                                if(!classes[index].details) {
+                                  this.props.dispatch({ type: 'CLASS_FETCH_REQUESTED', id: classId})
+                                }
 
-                    this.selectClass(e.target.value)
-                    this.props.dispatch({ type: 'SET_CLASS_ID', classId: parseInt(classId,10) })
-                  }}>
-                    {
-                        classes.map((c, i) => {
-                          let index = i+1
-                          return <option key={index} value={index} selected={index === this.props.classId}>{c.name}</option>
-                        })
-                    }
-                </select>
-                {classes.length > 0 && selectedClass.details ? (<ClassDetails details={selectedClass.details} />) : ""}
+                                this.selectClass(index)
+                                this.props.dispatch({ type: 'SET_CLASS_ID', classId: parseInt(classId,10) })
+                            }}>{c.name}</li>
+                })}
+              </ul>
+              {classes.length > 0 && selectedClass.details ? (<ClassDetails details={selectedClass.details} />) : ""}
             </div>
         )
     }
