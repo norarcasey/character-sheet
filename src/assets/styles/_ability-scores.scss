@@ -5,7 +5,7 @@
 }
 
 .ability-score {
-  border: solid 2px black;
+  border: solid 2px $text-color;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -18,6 +18,9 @@
   }
 
   input {
+    background-color: $wizard-accent;
+    border: none;
+    color: $text-color;
     font-size: 1.5rem;
     line-height: 1.7rem;
     text-align: center;
