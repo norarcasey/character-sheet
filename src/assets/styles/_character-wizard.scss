@@ -9,6 +9,7 @@
     width: 100%;
 
     a {
+      border-bottom: solid 1px #fff;
       color: #fff;
       display: inline-block;
       width: 50%;
@@ -23,6 +24,7 @@
 
       &.active {
         background-color: $wizard-accent;
+        border-bottom: solid 1px $wizard-accent;
       }
     }
   }
