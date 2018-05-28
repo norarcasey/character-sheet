@@ -26,3 +26,17 @@
     text-align: center;
   }
 }
+
+.set-ability-scores {
+
+  ul {
+
+    li {
+      display: flex;
+    }
+
+    label {
+      width: 40%;
+    }
+  }
+}

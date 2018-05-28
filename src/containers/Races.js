@@ -46,28 +46,7 @@ class Races extends Component {
                             />
                 })}
               </ul>
-              {/* <select
-                  name="race-select"
-                  id="race-select"
-                  className="race-select"
-                  size={races.length}
-                  onChange={ (e) => {
-                        let raceId = e.target.value
 
-                        if(!races[raceId - 1].details) {
-                          this.props.dispatch({ type: 'RACE_FETCH_REQUESTED', id: raceId})
-                        }
-
-                        this.selectRace(e.target.value)
-                        this.props.dispatch({ type: 'SET_RACE_ID', raceId: parseInt(raceId,10) })
-                      }}>
-                  {
-                      races.map((race, i) => {
-                          let index = i+1
-                          return <option key={index} value={index} selected={index === this.props.raceId}>{race.name}</option>
-                      })
-                  }
-              </select> */}
               {races.length > 0 && selectedRace.details ? (<RaceDetails details={selectedRace.details} />) : ""}
             </div>
         )
