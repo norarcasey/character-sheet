@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ClassDetails from '../components/ClassDetails'
+import ListItem from '../components/ListItem'
 
 class Classes extends Component {
 
@@ -31,18 +32,17 @@ class Classes extends Component {
               <ul>
                 { classes.map((c, index) => {
                     let classId = index + 1
-                    return <li
+
+                    return <ListItem
                               key={classId}
+                              index={index}
+                              name={c.name}
+                              list={classes}
                               className={classId === this.props.classId ? 'selected' : ''}
-                              onClick={() => {
-
-                                if(!classes[index].details) {
-                                  this.props.dispatch({ type: 'CLASS_FETCH_REQUESTED', id: classId})
-                                }
-
-                                this.selectClass(index)
-                                this.props.dispatch({ type: 'SET_CLASS_ID', classId: parseInt(classId,10) })
-                            }}>{c.name}</li>
+                              fetchDispatch={{ type: 'CLASS_FETCH_REQUESTED', id: classId}}
+                              setDispatch={{ type: 'SET_CLASS_ID', classId: parseInt(classId,10) }}
+                              selectItem={() => { this.selectClass(index)}}
+                            />
                 })}
               </ul>
               {classes.length > 0 && selectedClass.details ? (<ClassDetails details={selectedClass.details} />) : ""}
