@@ -1,44 +1,19 @@
 import React, { Component } from 'react'
 import Classes from './Classes'
 import Races from './Races'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-class CharacterWizard extends Component {
-
-    constructor(props) {
-        super(props)
-
-        this.state = {
-          activeTab: 'class'
-        }
-    }
-
-    render() {
-        return (
-          <section className="character-wizard">
-            <nav>
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault()
-                  this.setState({activeTab: 'class'})
-                }}
-                className={this.state.activeTab === 'class'? 'active' : ''}>Class</a>
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault()
-                  this.setState({activeTab: 'race'})
-                }}
-                className={this.state.activeTab === 'race'? 'active' : ''}>Race</a>
-            </nav>
-            <div className="character-wizard-details">
-              {this.state.activeTab === 'class' ? <Classes /> : <Races />}
-            </div>
-          </section>
-
-        )
-    }
-
-}
-
-export default CharacterWizard
+export default () => (
+  <Tabs className="character-wizard">
+    <TabList className="character-wizard-tabs">
+      <Tab>Class</Tab>
+      <Tab>Race</Tab>
+    </TabList>
+    <TabPanel className="character-wizard-details">
+      <Classes />
+    </TabPanel>
+    <TabPanel className="character-wizard-details">
+      <Races />
+    </TabPanel>
+  </Tabs>
+)

@@ -4,25 +4,23 @@
   margin-bottom: 1rem;
   width: 100%;
 
-  nav {
+  .character-wizard-tabs {
     background-color: $wizard-accent;
     width: 100%;
 
-    a {
+    li {
       border-bottom: solid 1px #fff;
       color: #fff;
       display: inline-block;
       width: 50%;
       text-align: center;
-      text-decoration: none;
-
       padding: .5rem;
 
       &:nth-child(odd) {
         border-right: solid 1px #fff;
       }
 
-      &.active {
+      &[aria-selected="true"] {
         background-color: $wizard-primary;
         border-bottom: solid 1px $wizard-primary;
         color: $text-color;
@@ -31,21 +29,16 @@
   }
 
   .character-wizard-details {
-    padding: 1.3rem;
 
     .classes, .races {
       display: flex;
       justify-content: space-between;
-    }
+      padding: .5rem 1.3rem 0 1.3rem;
 
-    select {
-      background-color: $wizard-primary;
-      border: none;
-      font-size: 1.2rem;
-      height: 100%;
-      overflow-y: auto;
-      padding-right: 1rem;
-      width: 40%;
+      ul {
+        min-width: 125px;
+        margin-right: .5rem;
+      }
     }
 
     .details {
