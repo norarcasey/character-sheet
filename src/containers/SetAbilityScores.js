@@ -34,26 +34,22 @@ class SetAbilityScores extends Component {
     let remainingPoints = STARTINGPOINTS - totalPointCost
 
     return (
-        <div className="set-ability-scores">
+        <section className="set-ability-scores">
+          <ul>
+          {
+            this.props.abilityScores.map((ability, index) => {
+              return <li key={index}>
+                        <label>{ability.full_name}</label>
+                        <button onClick={() => {this.updateAbilityScore(ability, 1)}}>+</button>
+                        <span>{ability.score}</span>
+                        <button onClick={() => {this.updateAbilityScore(ability, -1)}}>-</button>
+                      </li>
+            })
+          }
+          </ul>
 
-          <section className="ability-score-toggles">
-            <ul>
-            {
-              this.props.abilityScores.map((ability, index) => {
-                return <li key={index}>
-                          <label>{ability.full_name}</label>
-                          <button onClick={() => {this.updateAbilityScore(ability, 1)}}>+</button>
-                          <span>{ability.score}</span>
-                          <button onClick={() => {this.updateAbilityScore(ability, -1)}}>-</button>
-                        </li>
-              })
-            }
-            </ul>
-
-            <p className={remainingPoints < 0 ? "remaining-points alert" : "remaining-points"}>{remainingPoints}</p>
-
-          </section>
-        </div>
+          <p className={remainingPoints < 0 ? "remaining-points alert" : "remaining-points"}>{remainingPoints}</p>
+        </section>
     )
   }
 
