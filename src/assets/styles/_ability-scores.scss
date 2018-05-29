@@ -36,7 +36,35 @@
     }
 
     label {
-      width: 40%;
+      width: 70%;
     }
+
+    button, span {
+      width: 10%;
+    }
+
+    button {
+      background: none;
+      border: none;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.4rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    span {
+      text-align: center;
+    }
+  }
+
+  .remaining-points {
+    font-size: 3rem;
+    margin: 0 3rem 0 0;
+    text-align: right;
+
+    &.alert {
+      color: red;
+    }
+
   }
 }

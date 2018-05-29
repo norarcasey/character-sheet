@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { setAbilityScore } from '../actions'
 
 class SetAbilityScores extends Component {
 
@@ -7,26 +8,49 @@ class SetAbilityScores extends Component {
     super(props)
 
     this.state = {
-      remainingPointsToSpend: 27
+      pointCosts: {"8": 0, "9": 1, "10": 2, "11": 3, "12": 4, "13": 5, "14": 7, "15": 9}
+    }
+  }
+
+  getSum(total, num) {
+      return total + num;
+  }
+
+  updateAbilityScore(ability, change) {
+    let newScore = ability.score + change
+
+    if(newScore <= 15 && newScore >= 8) {
+      this.props.dispatch(setAbilityScore(ability.name, newScore))
     }
   }
 
   render() {
+
+    let totalPointCost = this.props.abilityScores.map(ability =>
+      this.state.pointCosts[ability.score.toString()]
+    ).reduce(this.getSum)
+
+    const STARTINGPOINTS = 27
+    let remainingPoints = STARTINGPOINTS - totalPointCost
+
     return (
         <div className="set-ability-scores">
-          <span>{this.state.remainingPointsToSpend}</span>
 
           <section className="ability-score-toggles">
+            <ul>
             {
-              this.props.abilityScores.map((ability) => {
-                return <ul><li>
+              this.props.abilityScores.map((ability, index) => {
+                return <li key={index}>
                           <label>{ability.full_name}</label>
-                          <button>+</button>
+                          <button onClick={() => {this.updateAbilityScore(ability, 1)}}>+</button>
                           <span>{ability.score}</span>
-                          <button>-</button>
-                        </li></ul>
+                          <button onClick={() => {this.updateAbilityScore(ability, -1)}}>-</button>
+                        </li>
               })
             }
+            </ul>
+
+            <p className={remainingPoints < 0 ? "remaining-points alert" : "remaining-points"}>{remainingPoints}</p>
 
           </section>
         </div>
