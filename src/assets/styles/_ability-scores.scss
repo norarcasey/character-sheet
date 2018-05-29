@@ -55,6 +55,11 @@
 
     span {
       text-align: center;
+
+      &.ability-score-bonus {
+        color: $wizard-accent;
+        font-weight: bold;
+      }
     }
   }
 

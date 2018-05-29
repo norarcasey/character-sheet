@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setAbilityScore } from '../actions'
+import { getSelectedRaceBonuses } from '../helpers/abilityScoreHelper'
 
 class SetAbilityScores extends Component {
 
@@ -32,16 +33,20 @@ class SetAbilityScores extends Component {
 
     const STARTINGPOINTS = 27
     let remainingPoints = STARTINGPOINTS - totalPointCost
+    let raceBonuses =  getSelectedRaceBonuses()
 
     return (
         <section className="set-ability-scores">
           <ul>
           {
             this.props.abilityScores.map((ability, index) => {
+
+              let raceBonus = raceBonuses ? raceBonuses[index] : 0
+
               return <li key={index}>
                         <label>{ability.full_name}</label>
                         <button onClick={() => {this.updateAbilityScore(ability, 1)}}>+</button>
-                        <span>{ability.score}</span>
+                        <span className={raceBonus > 0 ? "ability-score-bonus" : ""}>{ability.score + raceBonus}</span>
                         <button onClick={() => {this.updateAbilityScore(ability, -1)}}>-</button>
                       </li>
             })
