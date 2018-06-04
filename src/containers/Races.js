@@ -40,14 +40,13 @@ class Races extends Component {
                               name={race.name}
                               list={races}
                               className={raceId === this.props.raceId ? 'selected' : ''}
-                              fetchDispatch={{ type: 'RACE_FETCH_REQUESTED', id: raceId}}
                               setDispatch={{ type: 'SET_RACE_ID', raceId: parseInt(raceId,10) }}
                               selectItem={() => { this.selectRace(index)}}
                             />
                 })}
               </ul>
 
-              {races.length > 0 && selectedRace.details ? (<RaceDetails details={selectedRace.details} />) : ""}
+              {races.length > 0 && selectedRace ? (<RaceDetails details={selectedRace} />) : ""}
             </div>
         )
     }

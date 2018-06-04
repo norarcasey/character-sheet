@@ -11,14 +11,9 @@ class ListItem extends Component {
       <li
         className={props.className}
         onClick={() => {
-
-          if(!props.list[props.index].details) {
-            this.props.dispatch(props.fetchDispatch)
-          }
-
           props.selectItem()
           this.props.dispatch(props.setDispatch)
-      }}
+        }}
       >{props.name}</li>
     )
   }
