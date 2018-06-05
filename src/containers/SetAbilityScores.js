@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setAbilityScore } from '../actions'
-import { getSelectedRaceBonuses } from '../helpers/abilityScoreHelper'
 
 class SetAbilityScores extends Component {
 
@@ -33,7 +32,7 @@ class SetAbilityScores extends Component {
 
     const STARTINGPOINTS = 27
     let remainingPoints = STARTINGPOINTS - totalPointCost
-    let raceBonuses =  getSelectedRaceBonuses()
+    let raceBonuses =  this.props.race.ability_bonuses
 
     return (
         <section className="set-ability-scores">
@@ -61,7 +60,8 @@ class SetAbilityScores extends Component {
 }
 
 const mapStateToProps = state => ({
-  abilityScores: state.abilityScores
+  abilityScores: state.abilityScores,
+  race: state.race
 })
 
 export default connect(mapStateToProps)(SetAbilityScores)
