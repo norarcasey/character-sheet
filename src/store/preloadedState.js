@@ -1,3 +1,5 @@
+import races from '../data/races'
+
 const abilityScores = [
   {full_name: "Strength", name: 'STR', score: 8},
   {full_name: "Dexterity", name: 'DEX', score: 8},
@@ -7,7 +9,7 @@ const abilityScores = [
   {full_name: "Charisma", name: 'CHA', score: 8}
 ]
 
-const RaceId = 1
+const Race = races[0]
 const ClassId = 1
 const ProficiencyBonus = 2
 
@@ -40,6 +42,6 @@ export const PreloadedState = {
   abilityScores: abilityScores,
   classId: ClassId,
   proficiencyBonus: ProficiencyBonus,
-  raceId: RaceId,
+  race: Race,
   skills: Skills
 }

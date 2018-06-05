@@ -40,7 +40,6 @@ class Classes extends Component {
                               list={classes}
                               className={classId === this.props.classId ? 'selected' : ''}
                               setDispatch={{ type: 'SET_CLASS_ID', classId: parseInt(classId,10) }}
-                              selectItem={() => { this.selectClass(index)}}
                             />
                 })}
               </ul>

@@ -11,38 +11,23 @@ class Races extends Component {
         if(props.races.length === 0) {
             props.dispatch({type: 'RACES_FETCH_REQUESTED'})
         }
-
-        this.state = {
-          selectedRaceIndex: 0
-        }
-
-        this.selectRace = this.selectRace.bind(this);
-    }
-
-    selectRace(index) {
-      this.setState({ selectedRaceIndex: parseInt(index, 10) -1 })
     }
 
     render() {
 
       let races = this.props.races
-      let selectedRace = races[this.props.raceId -1]
+      let selectedRace = races[this.props.race.index - 1]
 
         return (
             <div className="races">
               <ul>
                 { races.map((race, index) => {
-                    let raceId = index + 1
 
-                    return <ListItem
-                              key={raceId}
-                              index={index}
-                              name={race.name}
-                              list={races}
-                              className={raceId === this.props.raceId ? 'selected' : ''}
-                              setDispatch={{ type: 'SET_RACE_ID', raceId: parseInt(raceId,10) }}
-                              selectItem={() => { this.selectRace(index)}}
-                            />
+                    return <li  key={index}
+                                className={race.index === this.props.race.index ? 'selected' : ''}
+                                onClick={() => this.props.dispatch({ type: 'SET_RACE', race: race })}>
+                                {race.name}
+                            </li>
                 })}
               </ul>
 
@@ -54,7 +39,7 @@ class Races extends Component {
 
 const mapStateToProps = (state) => ({
     races: state.races,
-    raceId: state.raceId
+    race: state.race
 })
 
 export default connect(mapStateToProps)(Races)

@@ -3,16 +3,15 @@ import { connect } from 'react-redux'
 import AbilityScore from '../components/AbilityScore'
 import { saveStateToFirebase }  from '../database/firebase'
 import { modifierHelper } from '../helpers/modifierHelper'
-import { getSelectedRaceBonuses } from '../helpers/abilityScoreHelper'
 
-const AbilityScores = ( {abilityScores} ) => {
+const AbilityScores = ( {abilityScores, race} ) => {
 
  return (
     <div className="ability-scores">
         <form onSubmit={e => { e.preventDefault() }}>
           {
             abilityScores.map((ability, key) => {
-              let score = ability.score + getSelectedRaceBonuses()[key]
+              let score = ability.score + race.ability_bonuses[key]
               let modifier = modifierHelper(score)
 
               return <AbilityScore
@@ -32,7 +31,8 @@ const AbilityScores = ( {abilityScores} ) => {
 }
 
 const mapStateToProps = state => ({
-    abilityScores: state.abilityScores
+    abilityScores: state.abilityScores,
+    race: state.race
 })
 
 export default connect(mapStateToProps)(AbilityScores)
