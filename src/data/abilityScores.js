@@ -1,4 +1,4 @@
-[{
+export default [{
 	"index": 1,
 	"name": "STR",
 	"full_name": "Strength",
