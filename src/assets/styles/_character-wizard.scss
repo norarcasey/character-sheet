@@ -11,14 +11,15 @@
 
     li {
       border-bottom: solid 1px #fff;
+      border-right: solid 1px #fff;
       color: #fff;
       display: inline-block;
       width: 50%;
       text-align: center;
       padding: .5rem;
 
-      &:nth-child(odd) {
-        border-right: solid 1px #fff;
+      &:last-child {
+        border-right: none;
       }
 
       &[aria-selected="true"] {
