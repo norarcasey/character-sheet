@@ -1,4 +1,4 @@
-[
+export default [
 	{
 		"index": 1,
 		"name": "Hill Dwarf",
@@ -17,11 +17,11 @@
 		],
 		"starting_proficiencies:": [],
 		"starting_proficiency_options": {
-			
+
 		},
 		"languages": [],
 		"language_options": {
-			
+
 		},
 		"racial_traits": [
 			{
@@ -67,7 +67,7 @@
 			}
 		],
 		"starting_proficiency_options": {
-			
+
 		},
 		"languages": [],
 		"language_options": {
@@ -133,7 +133,7 @@
 			"type": "language"
 		},
 		"racial_traits": [],
-		"racial_trait_options": 
+		"racial_trait_options":
 			{
 				"choose": 1,
 				"from": [
@@ -209,11 +209,11 @@
 		],
 		"starting_proficiencies:": [],
 		"starting_proficiency_options": {
-			
+
 		},
 		"languages": [],
 		"language_options": {
-			
+
 		},
 		"racial_traits": [
 			{
@@ -253,7 +253,7 @@
 		"starting_proficiency_options": {},
 		"languages": [],
 		"language_options": {
-			
+
 		},
 		"racial_traits": [],
 		"racial_trait_options": {},
@@ -296,7 +296,7 @@
 		"starting_proficiency_options": {},
 		"languages": [],
 		"language_options": {
-			
+
 		},
 		"racial_traits": [
 			{
@@ -344,7 +344,7 @@
 		"starting_proficiency_options": {},
 		"languages": [],
 		"language_options": {
-			
+
 		},
 		"racial_traits": [
 			{

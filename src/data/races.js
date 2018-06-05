@@ -81,12 +81,72 @@ export default [
 		],
 		"subraces": [
 			{
-				"url": "http://www.dnd5eapi.co/api/subraces/1",
-				"name": "Hill Dwarf"
+				"index": 1,
+				"name": "Hill Dwarf",
+				"race": {
+					"url": "http://www.dnd5eapi.co/api/races/1",
+					"name": "Dwarf"
+				},
+				"desc": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.",
+				"ability_bonuses": [
+					0,
+					0,
+					0,
+					0,
+					1,
+					0
+				],
+				"starting_proficiencies:": [],
+				"starting_proficiency_options": {
+
+				},
+				"languages": [],
+				"language_options": {
+
+				},
+				"racial_traits": [
+					{
+						"url": "http://www.dnd5eapi.co/api/traits/4",
+						"name": "Dwarven Toughness"
+					}
+				],
+				"racial_trait_options": {},
+				"url": "http://www.dnd5eapi.co/api/subraces/1"
 			},
 			{
-				"url": "http://www.dnd5eapi.co/api/subraces/4",
-				"name": "Mountain Dwarf"
+				"index": 4,
+				"name": "Mountain Dwarf",
+				"race": {
+					"url": "http://www.dnd5eapi.co/api/races/1",
+					"name": "Dwarf"
+				},
+				"desc": "As a mountain dwarf, you're strong and hardy, accustomed to a difficult life in rugged terrain. You're probably on the tall side (for a dwarf), and tend toward lighter coloration.",
+				"ability_bonuses": [
+					2,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"starting_proficiencies:": [
+					{
+						"url": "http://www.dnd5eapi.co/api/proficiencies/2",
+						"name": "Medium armor"
+					},
+					{
+						"url": "http://www.dnd5eapi.co/api/proficiencies/3",
+						"name": "Heavy armor"
+					}
+				],
+				"starting_proficiency_options": {},
+				"languages": [],
+				"language_options": {
+
+				},
+				"racial_traits": [],
+				"racial_trait_options": {},
+				"url": "http://www.dnd5eapi.co/api/subraces/4"
 			}
 		],
 		"url": "http://www.dnd5eapi.co/api/races/1"
