@@ -39,13 +39,12 @@ class Classes extends Component {
                               name={c.name}
                               list={classes}
                               className={classId === this.props.classId ? 'selected' : ''}
-                              fetchDispatch={{ type: 'CLASS_FETCH_REQUESTED', id: classId}}
                               setDispatch={{ type: 'SET_CLASS_ID', classId: parseInt(classId,10) }}
                               selectItem={() => { this.selectClass(index)}}
                             />
                 })}
               </ul>
-              {classes.length > 0 && selectedClass.details ? (<ClassDetails details={selectedClass.details} />) : ""}
+              {classes.length > 0 && selectedClass ? (<ClassDetails details={selectedClass} />) : ""}
             </div>
         )
     }
