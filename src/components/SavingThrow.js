@@ -23,6 +23,7 @@ class SavingThrow extends Component {
       <div className="saving-throw">
           <input
             type="checkbox"
+            checked={this.props.isProficient}
             value={this.props.proficiencyBonus}
             onChange={ (e) => { this.updateModifier(e.target.checked ? e.target.value : 0) } }
           />
