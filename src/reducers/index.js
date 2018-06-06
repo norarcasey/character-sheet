@@ -3,7 +3,7 @@ import abilityScores from './abilityScores'
 import characterLevel from './characterLevel'
 import characterName from './characterName'
 import classes from './classes'
-import classId from './classId'
+import characterClass from './class'
 import proficiencyBonus from './proficiencyBonus'
 import races from './races'
 import race from './race'
@@ -14,7 +14,7 @@ export default combineReducers({
   characterLevel,
   characterName,
   classes,
-  classId,
+  characterClass,
   proficiencyBonus,
   races,
   race,

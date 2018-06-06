@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import RaceDetails from '../components/RaceDetails'
-import ListItem from '../components/ListItem'
 
 class Races extends Component {
 
