@@ -24,10 +24,12 @@ class Skill extends Component {
         <div className="skill">
             <input
               type="checkbox"
+              checked={this.props.skillProficiencies.indexOf(this.props.skill.name) > -1}
               value={this.props.proficiencyBonus}
+              disabled={this.props.proficiencies.indexOf(this.props.skill.name) < 0}
               onChange={ (e) => {
                 this.props.dispatch({
-                    type: 'SET_SKILL',
+                    type: 'UPDATE_SKILL_PROFICIENCY',
                     name: this.props.skill.name,
                     isProficient: e.target.checked
                   })
@@ -42,4 +44,8 @@ class Skill extends Component {
 
   }
 
-  export default connect()(Skill)
+  const mapStateToProp = state => ({
+    skillProficiencies: state.skillProficiencies
+  })
+
+  export default connect(mapStateToProp)(Skill)

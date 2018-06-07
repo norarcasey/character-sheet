@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { concatPropNames } from '../helpers/detailHelper'
+import { classProficiencies } from '../helpers/classHelper'
+
 
 class ClassDetails extends Component {
 
@@ -14,13 +16,15 @@ class ClassDetails extends Component {
         { concatPropNames('Saving Throws', details.saving_throws) }
         { concatPropNames('Proficiences', details.proficiencies) }
         { concatPropNames('Subclasses', details.subclasses) }
+        { concatPropNames('Skill Proficiencies Choices', classProficiencies(this.props.class))}
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  abilityScores: state.abilityScores
+  abilityScores: state.abilityScores,
+  class: state.characterClass
 })
 
 export default connect(mapStateToProps)(ClassDetails)

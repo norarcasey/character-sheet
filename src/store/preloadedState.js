@@ -1,5 +1,6 @@
 import races from '../data/races'
 import classes from '../data/classes'
+import _ from 'lodash'
 
 const abilityScores = [
   {full_name: "Strength", name: 'STR', score: 8},
@@ -13,6 +14,7 @@ const abilityScores = [
 const Race = races[0]
 const Clss = classes[0]
 const ProficiencyBonus = 2
+const SkillProficiencies = []
 
 const Skills = [
   { name: "Athletics", type: "STR" },
@@ -44,5 +46,6 @@ export const PreloadedState = {
   characterClass: Clss,
   proficiencyBonus: ProficiencyBonus,
   race: Race,
-  skills: Skills
+  skills: _.sortBy(Skills, 'name'),
+  skillProficiencies: SkillProficiencies
 }

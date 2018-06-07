@@ -6,31 +6,31 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 2,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/106",
-						"name": "Skill: Animal Handling"
+						"name": "Animal Handling"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/108",
-						"name": "Skill: Athletics"
+						"name": "Athletics"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/112",
-						"name": "Skill: Intimidation"
+						"name": "Intimidation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/115",
-						"name": "Skill: Nature"
+						"name": "Nature"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/116",
-						"name": "Skill: Perception"
+						"name": "Perception"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/122",
-						"name": "Skill: Survival"
+						"name": "Survival"
 					}
 				]
 			}
@@ -93,79 +93,79 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 3,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/105",
-						"name": "Skill: Acrobatics"
+						"name": "Acrobatics"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/106",
-						"name": "Skill: Animal Handling"
+						"name": "Animal Handling"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/107",
-						"name": "Skill: Arcana"
+						"name": "Arcana"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/108",
-						"name": "Skill: Athletics"
+						"name": "Athletics"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/109",
-						"name": "Skill: Deception"
+						"name": "Deception"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/110",
-						"name": "Skill: History"
+						"name": "History"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/111",
-						"name": "Skill: Insight"
+						"name": "Insight"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/112",
-						"name": "Skill: Intimidation"
+						"name": "Intimidation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/113",
-						"name": "Skill: Investigation"
+						"name": "Investigation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/114",
-						"name": "Skill: Medicine"
+						"name": "Medicine"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/115",
-						"name": "Skill: Nature"
+						"name": "Nature"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/116",
-						"name": "Skill: Perception"
+						"name": "Perception"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/117",
-						"name": "Skill: Performance"
+						"name": "Performance"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/118",
-						"name": "Skill: Persuasion"
+						"name": "Persuasion"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/119",
-						"name": "Skill: Religion"
+						"name": "Religion"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/120",
-						"name": "Skill: Sleight of Hand"
+						"name": "Sleight of Hand"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/121",
-						"name": "Skill: Stealth"
+						"name": "Stealth"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/122",
-						"name": "Skill: Survival"
+						"name": "Survival"
 					}
 				]
 			},
@@ -279,27 +279,27 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 2,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/110",
-						"name": "Skill: History"
+						"name": "History"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/111",
-						"name": "Skill: Insight"
+						"name": "Insight"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/114",
-						"name": "Skill: Medicine"
+						"name": "Medicine"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/118",
-						"name": "Skill: Persuasion"
+						"name": "Persuasion"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/119",
-						"name": "Skill: Religion"
+						"name": "Religion"
 					}
 				]
 			}
@@ -359,39 +359,39 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 2,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/106",
-						"name": "Skill: Animal Handling"
+						"name": "Animal Handling"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/107",
-						"name": "Skill: Arcana"
+						"name": "Arcana"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/111",
-						"name": "Skill: Insight"
+						"name": "Insight"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/114",
-						"name": "Skill: Medicine"
+						"name": "Medicine"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/115",
-						"name": "Skill: Nature"
+						"name": "Nature"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/116",
-						"name": "Skill: Perception"
+						"name": "Perception"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/119",
-						"name": "Skill: Religion"
+						"name": "Religion"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/122",
-						"name": "Skill: Survival"
+						"name": "Survival"
 					}
 				]
 			}
@@ -491,39 +491,39 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 2,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/105",
-						"name": "Skill: Acrobatics"
+						"name": "Acrobatics"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/106",
-						"name": "Skill: Animal Handling"
+						"name": "Animal Handling"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/108",
-						"name": "Skill: Athletics"
+						"name": "Athletics"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/110",
-						"name": "Skill: History"
+						"name": "History"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/111",
-						"name": "Skill: Insight"
+						"name": "Insight"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/112",
-						"name": "Skill: Intimidation"
+						"name": "Intimidation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/116",
-						"name": "Skill: Perception"
+						"name": "Perception"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/122",
-						"name": "Skill: Survival"
+						"name": "Survival"
 					}
 				]
 			}
@@ -710,7 +710,7 @@ export default [
 			},
 			{
 				"choose": 2,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://dnd5eapi.co/api/proficiencies/105",
@@ -785,31 +785,31 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 2,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/108",
-						"name": "Skill: Athletics"
+						"name": "Athletics"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/111",
-						"name": "Skill: Insight"
+						"name": "Insight"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/112",
-						"name": "Skill: Intimidation"
+						"name": "Intimidation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/114",
-						"name": "Skill: Medicine"
+						"name": "Medicine"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/118",
-						"name": "Skill: Persuasion"
+						"name": "Persuasion"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/119",
-						"name": "Skill: Religion"
+						"name": "Religion"
 					}
 				]
 			}
@@ -869,39 +869,39 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 3,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/106",
-						"name": "Skill: Animal Handling"
+						"name": "Animal Handling"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/108",
-						"name": "Skill: Athletics"
+						"name": "Athletics"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/111",
-						"name": "Skill: Insight"
+						"name": "Insight"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/113",
-						"name": "Skill: Investigation"
+						"name": "Investigation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/115",
-						"name": "Skill: Nature"
+						"name": "Nature"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/116",
-						"name": "Skill: Perception"
+						"name": "Perception"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/121",
-						"name": "Skill: Stealth"
+						"name": "Stealth"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/122",
-						"name": "Skill: Survival"
+						"name": "Survival"
 					}
 				]
 			}
@@ -965,51 +965,51 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 4,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/105",
-						"name": "Skill: Acrobatics"
+						"name": "Acrobatics"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/108",
-						"name": "Skill: Athletics"
+						"name": "Athletics"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/109",
-						"name": "Skill: Deception"
+						"name": "Deception"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/111",
-						"name": "Skill: Insight"
+						"name": "Insight"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/112",
-						"name": "Skill: Intimidation"
+						"name": "Intimidation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/113",
-						"name": "Skill: Investigation"
+						"name": "Investigation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/116",
-						"name": "Skill: Perception"
+						"name": "Perception"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/117",
-						"name": "Skill: Performance"
+						"name": "Performance"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/118",
-						"name": "Skill: Persuasion"
+						"name": "Persuasion"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/120",
-						"name": "Skill: Sleight of Hand"
+						"name": "Sleight of Hand"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/121",
-						"name": "Skill: Stealth"
+						"name": "Stealth"
 					}
 				]
 			}
@@ -1080,31 +1080,31 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 2,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/107",
-						"name": "Skill: Arcana"
+						"name": "Arcana"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/109",
-						"name": "Skill: Deception"
+						"name": "Deception"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/111",
-						"name": "Skill: Insight"
+						"name": "Insight"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/112",
-						"name": "Skill: Intimidation"
+						"name": "Intimidation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/118",
-						"name": "Skill: Persuasion"
+						"name": "Persuasion"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/119",
-						"name": "Skill: Religion"
+						"name": "Religion"
 					}
 				]
 			}
@@ -1164,35 +1164,35 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 2,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/107",
-						"name": "Skill: Arcana"
+						"name": "Arcana"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/109",
-						"name": "Skill: Deception"
+						"name": "Deception"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/110",
-						"name": "Skill: History"
+						"name": "History"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/112",
-						"name": "Skill: Intimidation"
+						"name": "Intimidation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/113",
-						"name": "Skill: Investigation"
+						"name": "Investigation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/115",
-						"name": "Skill: Nature"
+						"name": "Nature"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/119",
-						"name": "Skill: Religion"
+						"name": "Religion"
 					}
 				]
 			}
@@ -1244,31 +1244,31 @@ export default [
 		"proficiency_choices": [
 			{
 				"choose": 2,
-				"type": "proficiencies",
+				"type": "skill",
 				"from": [
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/107",
-						"name": "Skill: Arcana"
+						"name": "Arcana"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/110",
-						"name": "Skill: History"
+						"name": "History"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/111",
-						"name": "Skill: Insight"
+						"name": "Insight"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/113",
-						"name": "Skill: Investigation"
+						"name": "Investigation"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/114",
-						"name": "Skill: Medicine"
+						"name": "Medicine"
 					},
 					{
 						"url": "http://www.dnd5eapi.co/api/proficiencies/119",
-						"name": "Skill: Religion"
+						"name": "Religion"
 					}
 				]
 			}

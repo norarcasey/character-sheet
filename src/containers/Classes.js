@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ClassDetails from '../components/ClassDetails'
+import {classProficiencies} from '../helpers/classHelper'
 
 class Classes extends Component {
 
@@ -25,6 +26,10 @@ class Classes extends Component {
                                className={c.index === selectedClass.index ? 'selected' : ''}
                                onClick={() => {
                                 this.props.dispatch({ type: 'SET_CLASS', class: c })
+                                this.props.dispatch({
+                                                      type: 'RESET_SKILL_PROFICIENCIES',
+                                                      proficiencies: classProficiencies(c)
+                                                    })
                                }}
                            >{c.name}</li>
                 })}

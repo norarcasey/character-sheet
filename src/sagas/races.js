@@ -5,7 +5,7 @@ export function* fetchRaces(action) {
    try {
     //   const response = yield call(fetch, 'http://www.dnd5eapi.co/api/races')
     //   const data = yield call([response, 'json'])
-
+    console.log(races);
     yield put({type: "RACES_FETCH_SUCCEEDED", races: races });
     //   yield put({type: "RACE_FETCH_REQUESTED", id: 1})
    } catch (e) {
