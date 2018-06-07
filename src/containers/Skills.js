@@ -2,14 +2,16 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Skill from '../components/Skill'
 import { modifierHelper } from '../helpers/modifierHelper'
-import {classProficiencies} from '../helpers/classHelper'
+import {classProficiencies, classProficienciesChooseCount} from '../helpers/classHelper'
 
-const Skills = ({ abilityScores, skills, proficiencyBonus, characterClass}) => {
+const Skills = ({ abilityScores, skills, proficiencyBonus, characterClass, skillProficiencies}) => {
+
+  let skillsLeftToChoose = classProficienciesChooseCount(characterClass) - skillProficiencies.length
 
   return (
 
     <div className="skills">
-      <h2>Skills</h2>
+      <h2>Skills <span className={skillsLeftToChoose < 0 ? "alert" : ""}>({skillsLeftToChoose})</span></h2>
       {
 
         skills.map( (skill, index) => {
@@ -36,6 +38,7 @@ const mapStateToProps = state => ({
   abilityScores: state.abilityScores,
   skills: state.skills,
   proficiencyBonus: state.proficiencyBonus,
+  skillProficiencies: state.skillProficiencies,
   characterClass: state.characterClass
 })
 
