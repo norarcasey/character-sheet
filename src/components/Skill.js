@@ -36,8 +36,7 @@ class Skill extends Component {
                 this.updateModifier(e.target.checked ? e.target.value : 0)
               } }
             />
-            <span>{ this.props.modifier + this.state.proficiencyBonus }</span>
-            <label>{ this.props.skill.name } <span>( {this.props.skill.type} )</span></label>
+            <label>{ this.props.modifier + this.state.proficiencyBonus }&nbsp;{ this.props.skill.name } <span>({this.props.skill.type})</span></label>
         </div>
       )
     }

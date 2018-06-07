@@ -2,7 +2,11 @@
   margin: 0 0 0 1rem;
 
   .saving-throw, .skill {
-    input, label, span {
+
+    align-items: center;
+    display: flex;
+
+    input, label {
       margin-right: 10px;
     }
   }
