@@ -23,12 +23,12 @@ class SavingThrow extends Component {
       <div className="saving-throw">
           <input
             type="checkbox"
+            disabled={!this.props.isProficient}
             checked={this.props.isProficient}
             value={this.props.proficiencyBonus}
             onChange={ (e) => { this.updateModifier(e.target.checked ? e.target.value : 0) } }
           />
-          <span>{ this.props.modifier + this.state.proficiencyBonus }</span>
-          <label>{ this.props.abilityScore.full_name }</label>
+          <label>{ this.props.modifier + this.state.proficiencyBonus }&nbsp;{ this.props.abilityScore.full_name }</label>
       </div>
     )
   }
