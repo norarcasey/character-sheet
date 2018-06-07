@@ -12,11 +12,7 @@ const skillProficiencies = (state = [], action) => {
         }
 
       case 'RESET_SKILL_PROFICIENCIES':
-
-        return state.map(pro => {
-          if(action.proficiencies.map(pro => pro.name).indexOf(pro) !== -1)
-            return pro
-        })
+        return state.filter(pro => action.proficiencies.map(pro => pro.name).indexOf(pro) !== -1)
 
       default:
         return state
