@@ -17,7 +17,7 @@ const AbilityScores = ( {abilityScores, race} ) => {
               return <AbilityScore
                         key={key}
                         name={ability.name}
-                        full_name={ability.full_name}
+                        fullName={ability.full_name}
                         score={score}
                         modifier={modifier}
                       />

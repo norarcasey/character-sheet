@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Classes from './Classes'
 import Races from './Races'

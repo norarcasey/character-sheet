@@ -1,5 +1,3 @@
-import store from '../store'
-
 export const classProficiencies = (characterClass) => {
   let proficientSkillOptions = classProficienciesArray(characterClass).from
   return proficientSkillOptions
