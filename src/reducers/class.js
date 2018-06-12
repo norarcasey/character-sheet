@@ -1,7 +1,7 @@
-export default function classs(state = [], action) {
+export default function classs(state = {}, action) {
   switch (action.type) {
     case 'SET_CLASS':
-      return action.class || {}
+      return action.class || state
     default:
       return state
   }

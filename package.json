@@ -4,10 +4,12 @@
   "private": true,
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-jest": "^23.0.1",
     "babel-preset-es2017": "^6.24.1",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.1.0",
     "node-sass": "^4.9.0",
     "react-scripts": "^1.1.4",
     "react-tabs": "^2.2.2",
@@ -33,7 +35,8 @@
     "start": "PORT=3006 react-scripts start",
     "build": "webpack --mode production",
     "eject": "react-scripts eject",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
     "dev": "webpack --mode development --watch"
   }
 }
