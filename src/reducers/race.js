@@ -1,7 +1,7 @@
-export default function race(state = [], action) {
+export default function race(state = {}, action) {
   switch (action.type) {
     case 'SET_RACE':
-      return action.race || {};
+      return action.race || state;
     default:
       return state;
   }
