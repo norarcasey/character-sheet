@@ -1,10 +1,10 @@
 const proficiencyBonus = (state = [], action) => {
   switch (action.type) {
     case 'SET_PROFICIENCY_BONUS':
-      return action.value
+      return action.value;
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default proficiencyBonus
+export default proficiencyBonus;

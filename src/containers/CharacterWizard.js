@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Classes from './Classes'
-import Races from './Races'
-import SetAbilityScores from './SetAbilityScores'
+import Classes from './Classes';
+import Races from './Races';
+import SetAbilityScores from './SetAbilityScores';
 
 export default () => (
   <Tabs className="character-wizard">
@@ -21,4 +21,4 @@ export default () => (
       <SetAbilityScores />
     </TabPanel>
   </Tabs>
-)
+);

@@ -1,10 +1,10 @@
-import React from 'react'
-import AbilityScores from '../containers/AbilityScores'
-import CharacterLevel from '../components/CharacterLevel'
-import CharacterName from '../components/CharacterName'
-import SavingThrows from '../containers/SavingThrows'
-import Skills from '../containers/Skills'
-import CharacterWizard from '../containers/CharacterWizard'
+import React from 'react';
+import AbilityScores from '../containers/AbilityScores';
+import CharacterLevel from '../components/CharacterLevel';
+import CharacterName from '../components/CharacterName';
+import SavingThrows from '../containers/SavingThrows';
+import Skills from '../containers/Skills';
+import CharacterWizard from '../containers/CharacterWizard';
 
 const App = () => (
   <div>
@@ -21,6 +21,6 @@ const App = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default App
+export default App;

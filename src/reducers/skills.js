@@ -1,22 +1,20 @@
 const skills = (state = [], action) => {
   switch (action.type) {
     case 'SET_SKILL':
-
-      let results = []
+      let results = [];
 
       state.forEach(skill => {
-
         if (skill.name === action.name) {
-          results.push({ ...skill, isProficient: !!action.isProficient })
+          results.push({ ...skill, isProficient: !!action.isProficient });
         } else {
-          results.push(skill)
+          results.push(skill);
         }
-      })
+      });
 
-      return results
+      return results;
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default skills
+export default skills;
