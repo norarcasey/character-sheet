@@ -22,7 +22,10 @@
     "babel-loader": "^7.1.4",
     "babel-preset-react": "^6.24.1",
     "firebase": "^5.0.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
     "lodash": "^4.17.10",
+    "prettier": "^1.13.5",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
@@ -31,12 +34,16 @@
     "redux-saga": "^0.16.0",
     "uglify-es": "^3.3.9"
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [ "prettier --single-quote --write", "git add"]
+  },
   "scripts": {
     "start": "PORT=3006 react-scripts start",
     "build": "webpack --mode production",
     "eject": "react-scripts eject",
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "dev": "webpack --mode development --watch"
+    "dev": "webpack --mode development --watch",
+    "precommit": "lint-staged"
   }
 }
