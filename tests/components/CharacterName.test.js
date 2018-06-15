@@ -30,11 +30,11 @@ describe('components', () => {
       input = component.find('input');
     });
 
-    it('should be type number', () => {
+    it('should be type text', () => {
       expect(input.props().type).toBe('text');
     });
 
-    it('should have className character-level', () => {
+    it('should have className character-name', () => {
       expect(input.props().className).toBe('character-name');
     });
 
@@ -42,7 +42,7 @@ describe('components', () => {
       expect(input.props().placeholder).toBe('Enter a Name');
     });
 
-    it('should dispatch SET_CHARACTER_LEVEL onChange', () => {
+    it('should dispatch SET_CHARACTER_NAME onChange', () => {
       const { component } = setup();
       component.find('input').simulate('change');
       expect(dispatchSpy.calledOnce).toBe(true);
