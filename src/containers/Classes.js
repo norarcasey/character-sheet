@@ -1,55 +1,43 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import ClassDetails from '../components/ClassDetails';
 import { classProficiencies } from '../helpers/classHelper';
+import classes from '../data/classes';
 
-class Classes extends Component {
-  constructor(props) {
-    super(props);
+export const Classes = ({ dispatch, characterClass }) => {
+  return (
+    <div className="classes">
+      <ul>
+        {classes.map((c, index) => {
+          return (
+            <li
+              key={index}
+              className={c.index === characterClass.index ? 'selected' : ''}
+              onClick={() => {
+                dispatch({ type: 'SET_CLASS', class: c });
+                dispatch({
+                  type: 'RESET_SKILL_PROFICIENCIES',
+                  proficiencies: classProficiencies(c)
+                });
+              }}
+            >
+              {c.name}
+            </li>
+          );
+        })}
+      </ul>
 
-    if (props.classes.length === 0) {
-      props.dispatch({ type: 'CLASSES_FETCH_REQUESTED' });
-    }
-  }
-
-  render() {
-    let classes = this.props.classes;
-    let selectedClass = classes[this.props.class.index - 1];
-
-    return (
-      <div className="classes">
-        <ul>
-          {classes.map((c, index) => {
-            return (
-              <li
-                key={index}
-                className={c.index === selectedClass.index ? 'selected' : ''}
-                onClick={() => {
-                  this.props.dispatch({ type: 'SET_CLASS', class: c });
-                  this.props.dispatch({
-                    type: 'RESET_SKILL_PROFICIENCIES',
-                    proficiencies: classProficiencies(c)
-                  });
-                }}
-              >
-                {c.name}
-              </li>
-            );
-          })}
-        </ul>
-        {classes.length > 0 && selectedClass ? (
-          <ClassDetails details={selectedClass} />
-        ) : (
-          ''
-        )}
-      </div>
-    );
-  }
-}
+      {classes.length > 0 && characterClass ? (
+        <ClassDetails details={characterClass} />
+      ) : (
+        ''
+      )}
+    </div>
+  );
+};
 
 const mapStateToProps = state => ({
-  classes: state.classes,
-  class: state.characterClass
+  characterClass: state.characterClass
 });
 
 export default connect(mapStateToProps)(Classes);
