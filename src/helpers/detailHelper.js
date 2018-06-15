@@ -10,5 +10,3 @@ export const concatPropNames = (name, propArray) => {
     </p>
   );
 };
-
-export const concatAbilityBonus = (bonusArray, abilityScores) => {};
