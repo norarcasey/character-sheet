@@ -34,6 +34,7 @@
     "react-redux": "^5.0.7",
     "redux": "^3.5.2",
     "redux-saga": "^0.16.0",
+    "sinon": "^6.0.0",
     "uglify-es": "^3.3.9"
   },
   "lint-staged": {
