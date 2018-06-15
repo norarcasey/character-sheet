@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const CharacterName = ({ dispatch }) => {
+export const CharacterName = ({ dispatch }) => {
   return (
     <input
       type="text"
