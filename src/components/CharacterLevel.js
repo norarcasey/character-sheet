@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const CharacterLevel = ({ dispatch }) => {
+export const CharacterLevel = ({ dispatch }) => {
   return (
     <input
       type="number"
