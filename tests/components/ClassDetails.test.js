@@ -26,7 +26,7 @@ describe('components', () => {
 
       expect(detailItems.at(0).text()).toBe('Hit Die:1d8');
       expect(detailItems.at(1).text()).toContain('Saving Throws');
-      expect(detailItems.at(2).text()).toContain('Proficiences');
+      expect(detailItems.at(2).text()).toContain('Proficiencies');
       expect(detailItems.at(3).text()).toContain('Subclasses');
       expect(detailItems.at(4).text()).toContain('Skill Proficiencies Choices');
     });

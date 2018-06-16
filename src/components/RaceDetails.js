@@ -1,40 +1,36 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import { concatPropNames } from '../helpers/detailHelper';
+import abilityScores from '../data/abilityScores';
 
-class RaceDetails extends Component {
-  render() {
-    let details = this.props.details;
-
-    return (
-      <div className="details">
-        {getAbilityBonus(details.ability_bonuses, this.props.abilityScores)}
-        <p>
-          <label>Size:</label>
-          {details.size}
-        </p>
-        <p>
-          <label>Speed:</label>
-          {details.speed}
-        </p>
-        {concatPropNames('Traits', details.traits)}
-        <p>
-          <label>Languages:</label>
-          {details.language_desc}
-        </p>
-        {concatPropNames('Proficiences', details.starting_proficiencies)}
-        <p>
-          <label>Age:</label>
-          {details.age}
-        </p>
-        <p>
-          <label>Alignment:</label>
-          {details.alignment}
-        </p>
-      </div>
-    );
-  }
-}
+const RaceDetails = ({ details }) => {
+  return (
+    <div className="details">
+      {getAbilityBonus(details.ability_bonuses, abilityScores)}
+      <p>
+        <label>Size:</label>
+        {details.size}
+      </p>
+      <p>
+        <label>Speed:</label>
+        {details.speed}
+      </p>
+      {concatPropNames('Traits', details.traits)}
+      <p>
+        <label>Languages:</label>
+        {details.language_desc}
+      </p>
+      {concatPropNames('Proficiencies', details.starting_proficiencies)}
+      <p>
+        <label>Age:</label>
+        {details.age}
+      </p>
+      <p>
+        <label>Alignment:</label>
+        {details.alignment}
+      </p>
+    </div>
+  );
+};
 
 const getAbilityBonus = (bonusArray, abilityScores) => {
   let results = bonusArray
@@ -51,8 +47,4 @@ const getAbilityBonus = (bonusArray, abilityScores) => {
   );
 };
 
-const mapStateToProps = state => ({
-  abilityScores: state.abilityScores
-});
-
-export default connect(mapStateToProps)(RaceDetails);
+export default RaceDetails;

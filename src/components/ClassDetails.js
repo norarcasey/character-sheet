@@ -9,7 +9,7 @@ const ClassDetails = ({ details }) => {
         <label>Hit Die:</label>1d{details.hit_die}
       </p>
       {concatPropNames('Saving Throws', details.saving_throws)}
-      {concatPropNames('Proficiences', details.proficiencies)}
+      {concatPropNames('Proficiencies', details.proficiencies)}
       {concatPropNames('Subclasses', details.subclasses)}
       {concatPropNames(
         'Skill Proficiencies Choices',
