@@ -1,11 +1,21 @@
 import React from 'react';
-import { concatPropNames } from '../helpers/detailHelper';
+import { concatPropNames, getDetails } from '../helpers/detailHelper';
 import abilityScores from '../data/abilityScores';
 
 const RaceDetails = ({ details }) => {
   return (
     <div className="details">
-      {getAbilityBonus(details.ability_bonuses, abilityScores)}
+      <ul>
+        {getDetails(details).map((item, index) => {
+          return (
+            <p key={index}>
+              <label>{item.name}</label>
+              <span>{item.value}</span>
+            </p>
+          );
+        })}
+      </ul>
+      {/* {getAbilityBonus(details.ability_bonuses, abilityScores)}
       <p>
         <label>Size:</label>
         {details.size}
@@ -27,7 +37,7 @@ const RaceDetails = ({ details }) => {
       <p>
         <label>Alignment:</label>
         {details.alignment}
-      </p>
+      </p> */}
     </div>
   );
 };

@@ -125,8 +125,7 @@ export default [
         racial_trait_options: {},
         url: 'http://www.dnd5eapi.co/api/subraces/4'
       }
-    ],
-    url: 'http://www.dnd5eapi.co/api/races/1'
+    ]
   },
   {
     index: 2,
@@ -179,8 +178,7 @@ export default [
         url: 'http://www.dnd5eapi.co/api/subraces/2',
         name: 'High Elf'
       }
-    ],
-    url: 'http://www.dnd5eapi.co/api/races/2'
+    ]
   },
   {
     index: 3,
@@ -228,8 +226,7 @@ export default [
         url: 'http://www.dnd5eapi.co/api/subraces/3',
         name: 'Lightfoot Halfling'
       }
-    ],
-    url: 'http://www.dnd5eapi.co/api/races/3'
+    ]
   },
   {
     index: 4,
@@ -320,8 +317,7 @@ export default [
     language_desc:
       'You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.',
     traits: [],
-    subraces: [],
-    url: 'http://www.dnd5eapi.co/api/races/4'
+    subraces: []
   },
   {
     index: 5,
@@ -410,8 +406,7 @@ export default [
       ],
       type: 'trait'
     },
-    subraces: [],
-    url: 'http://www.dnd5eapi.co/api/races/5'
+    subraces: []
   },
   {
     index: 6,
@@ -460,8 +455,7 @@ export default [
         url: 'http://www.dnd5eapi.co/api/subraces/8',
         name: 'Rock Gnome'
       }
-    ],
-    url: 'http://www.dnd5eapi.co/api/races/6'
+    ]
   },
   {
     index: 7,
@@ -514,8 +508,7 @@ export default [
       }
     ],
     trait_options: {},
-    subraces: [],
-    url: 'http://www.dnd5eapi.co/api/races/7'
+    subraces: []
   },
   {
     index: 8,
@@ -564,8 +557,7 @@ export default [
       }
     ],
     trait_options: {},
-    subraces: [],
-    url: 'http://www.dnd5eapi.co/api/races/8'
+    subraces: []
   },
   {
     index: 9,
@@ -608,7 +600,6 @@ export default [
       }
     ],
     trait_options: {},
-    subraces: [],
-    url: 'http://www.dnd5eapi.co/api/races/9'
+    subraces: []
   }
 ];
