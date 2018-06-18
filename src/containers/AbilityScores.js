@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setAbilityScore } from '../actions';
-import { saveStateToFirebase } from '../database/firebase';
+// import { saveStateToFirebase } from '../database/firebase';
 import { modifierHelper } from '../helpers/modifierHelper';
 
 export const AbilityScores = ({ abilityScores, dispatch, race }) => {
@@ -31,7 +31,7 @@ export const AbilityScores = ({ abilityScores, dispatch, race }) => {
           );
         })}
 
-        <button onClick={e => saveStateToFirebase()}>Save State</button>
+        {/* <button onClick={e => saveStateToFirebase()}>Save State</button> */}
       </form>
     </div>
   );
