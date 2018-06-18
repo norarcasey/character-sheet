@@ -1,53 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import RaceDetails from '../components/RaceDetails';
+import races from '../data/races';
 
-class Races extends Component {
-  constructor(props) {
-    super(props);
+const Races = ({ dispatch, selectedRace }) => {
+  return (
+    <div className="races">
+      <ul>
+        {races.map((race, index) => {
+          return (
+            <li
+              key={index}
+              className={race.index === selectedRace.index ? 'selected' : ''}
+              onClick={() => dispatch({ type: 'SET_RACE', race: race })}
+            >
+              {race.name}
+            </li>
+          );
+        })}
+      </ul>
 
-    if (props.races.length === 0) {
-      props.dispatch({ type: 'RACES_FETCH_REQUESTED' });
-    }
-  }
-
-  render() {
-    let races = this.props.races;
-    let selectedRace = races[this.props.race.index - 1];
-
-    return (
-      <div className="races">
-        <ul>
-          {races.map((race, index) => {
-            return (
-              <li
-                key={index}
-                className={
-                  race.index === this.props.race.index ? 'selected' : ''
-                }
-                onClick={() =>
-                  this.props.dispatch({ type: 'SET_RACE', race: race })
-                }
-              >
-                {race.name}
-              </li>
-            );
-          })}
-        </ul>
-
-        {races.length > 0 && selectedRace ? (
-          <RaceDetails details={selectedRace} />
-        ) : (
-          ''
-        )}
-      </div>
-    );
-  }
-}
+      {races.length > 0 && selectedRace ? (
+        <RaceDetails details={selectedRace} />
+      ) : (
+        ''
+      )}
+    </div>
+  );
+};
 
 const mapStateToProps = state => ({
-  races: state.races,
-  race: state.race
+  selectedRace: state.race
 });
 
 export default connect(mapStateToProps)(Races);
