@@ -49,6 +49,7 @@
     "eject": "react-scripts eject",
     "test": "jest",
     "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --watch --coverage",
     "dev": "webpack --mode development --watch",
     "precommit": "lint-staged"
   }
