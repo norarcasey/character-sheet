@@ -46,7 +46,6 @@ export const PreloadedState = {
   characterClass: Clss,
   proficiencyBonus: ProficiencyBonus,
   race: Race,
-  races: races,
   skills: _.sortBy(Skills, 'name'),
   skillProficiencies: SkillProficiencies
 };
