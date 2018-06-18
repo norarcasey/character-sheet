@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class Skill extends Component {
+export class Skill extends Component {
   constructor(props) {
     super(props);
 
