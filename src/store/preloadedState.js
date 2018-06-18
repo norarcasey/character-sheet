@@ -44,7 +44,6 @@ const Skills = [
 export const PreloadedState = {
   abilityScores: abilityScores,
   characterClass: Clss,
-  classes: classes,
   proficiencyBonus: ProficiencyBonus,
   race: Race,
   races: races,
