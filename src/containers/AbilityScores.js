@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import AbilityScore from '../components/AbilityScore';
+import { setAbilityScore } from '../actions';
 import { saveStateToFirebase } from '../database/firebase';
 import { modifierHelper } from '../helpers/modifierHelper';
 
-const AbilityScores = ({ abilityScores, race }) => {
+export const AbilityScores = ({ abilityScores, dispatch, race }) => {
   return (
     <div className="ability-scores">
       <form
@@ -17,13 +17,17 @@ const AbilityScores = ({ abilityScores, race }) => {
           let modifier = modifierHelper(score);
 
           return (
-            <AbilityScore
-              key={key}
-              name={ability.name}
-              fullName={ability.full_name}
-              score={score}
-              modifier={modifier}
-            />
+            <div className="ability-score" key={key}>
+              <label>{ability.full_name}</label>
+              <span className="ability-score-modifier">{modifier}</span>
+              <input
+                type="number"
+                value={score}
+                onChange={e => {
+                  dispatch(setAbilityScore(ability.name, e.target.value));
+                }}
+              />
+            </div>
           );
         })}
 
