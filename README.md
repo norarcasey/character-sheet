@@ -13,6 +13,7 @@ An application to quickly bootstrap D&D 5e characters.
 * Leveling
 * Equipment
 * Attacks
+* Desktop styling
 
 ## Local Setup
 ```
