@@ -6,7 +6,7 @@ import classes from '../data/classes';
 
 export const Classes = ({ dispatch, characterClass }) => {
   return (
-    <div className="classes">
+    <section className="classes">
       <ul>
         {classes.map((c, index) => {
           return (
@@ -32,7 +32,7 @@ export const Classes = ({ dispatch, characterClass }) => {
       ) : (
         ''
       )}
-    </div>
+    </section>
   );
 };
 

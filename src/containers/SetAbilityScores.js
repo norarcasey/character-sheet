@@ -71,12 +71,12 @@ class SetAbilityScores extends Component {
             );
           })}
         </ul>
-
         <p
           className={
             remainingPoints < 0 ? 'remaining-points alert' : 'remaining-points'
           }
         >
+          <label>Remaining Points:</label>
           {remainingPoints}
         </p>
       </section>

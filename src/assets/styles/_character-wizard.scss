@@ -1,6 +1,19 @@
 .character-wizard {
+  @media #{$medium} {
+    display: none;
+  }
+}
+
+.character-wizard-expanded {
+  display: none;
+  @media #{$medium} {
+    display: block;
+  }
+}
+
+.character-wizard, .character-wizard-expanded  {
   background-color: $wizard-primary;
-  height: 370px;
+  min-height: 370px;
   margin-bottom: 1rem;
   width: 100%;
 
@@ -13,6 +26,7 @@
       border-bottom: solid 1px #fff;
       border-right: solid 1px #fff;
       color: #fff;
+      cursor: pointer;
       display: inline-block;
       width: 50%;
       text-align: center;
@@ -34,12 +48,16 @@
 
     .classes, .races {
       display: flex;
-      justify-content: space-between;
-      padding: .5rem 1.3rem 0 1.3rem;
+      justify-content: flex-start;
+      padding: .5rem 0 0 1.3rem;
 
       ul {
         min-width: 125px;
         margin-right: .5rem;
+
+        li {
+          cursor: pointer;
+        }
       }
     }
 
@@ -48,8 +66,7 @@
       font-size: .8rem;
       margin-top: 0;
       max-height: 300px;
-      overflow-x: scroll;
-      width: 60%;
+      overflow: auto;
 
       p {
         margin-top: 0;
@@ -62,6 +79,22 @@
 
     }
   }
+}
 
+.character-wizard-expanded {
+  .character-wizard-details {
+    background-color: $wizard-accent;
+    display: flex;
 
+    section {
+      background-color: $wizard-primary;
+      margin: 1rem;
+      padding: 1rem;
+      width: 33%;
+
+      &.classes, &.races {
+        padding: 1rem;
+      }
+    }
+  }
 }
