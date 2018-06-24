@@ -29,14 +29,19 @@
 
 .set-ability-scores {
 
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
   ul {
+    max-width: 228px;
 
     li {
       display: flex;
     }
 
     label {
-      text-align: right;
+      max-width: 200px;
       width: 70%;
     }
 
@@ -65,7 +70,13 @@
 
   .remaining-points {
     font-size: 3rem;
-    margin: 0 3rem 0 0;
-    text-align: right;
+    margin: 0;
+    max-width: 228px;
+    padding-left: .5rem;
+
+    label {
+      font-size: 1rem;
+      padding-right: 2rem;
+    }
   }
 }

@@ -5,7 +5,7 @@ import races from '../data/races';
 
 const Races = ({ dispatch, selectedRace }) => {
   return (
-    <div className="races">
+    <section className="races">
       <ul>
         {races.map((race, index) => {
           return (
@@ -25,7 +25,7 @@ const Races = ({ dispatch, selectedRace }) => {
       ) : (
         ''
       )}
-    </div>
+    </section>
   );
 };
 
