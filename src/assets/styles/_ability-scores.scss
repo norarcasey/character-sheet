@@ -31,9 +31,9 @@
 
   display: flex;
   flex-direction: column;
+  padding: 1rem;
 
   ul {
-
     max-width: 228px;
 
     li {
@@ -42,7 +42,6 @@
 
     label {
       max-width: 200px;
-      text-align: right;
       width: 70%;
     }
 
@@ -72,12 +71,12 @@
   .remaining-points {
     font-size: 3rem;
     margin: 0;
-    max-width: 210px;
-    text-align: right;
+    max-width: 228px;
+    padding-left: .5rem;
 
     label {
       font-size: 1rem;
-      padding-right: 1rem;
+      padding-right: 2rem;
     }
   }
 }
